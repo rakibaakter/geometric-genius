@@ -39,7 +39,6 @@ function calculateArea(target){
     if(cartTitle.innerText === "Ellipse"){
         const area = Math.PI * firstInputValue * secondInputValue;
         setArea(cartBodyElement, area);
-
     }
     // console.log(cartTitle.innerText)
 }
