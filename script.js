@@ -9,9 +9,10 @@ function getInputValue(item, index){
 }
 // set Area 
 function setArea(item, area){
+    const fixArea = area.toFixed(2);
     const newElementSection = item.childNodes[7];
     const newElement = newElementSection.childNodes[1];
-    newElement.innerText = area;
+    newElement.innerText = fixArea;
     newElementSection.style.display = 'block';
     
 }
@@ -25,8 +26,18 @@ function calculateArea(target){
     const secondInputValue = getInputValue(inputElements , 5);
     // find cart title  
     const cartTitle  = cartBodyElement.childNodes[1];
-    if(cartTitle.innerText === "Triangle"){
+    if(cartTitle.innerText === "Triangle" || cartTitle.innerText === "Pentagon"){
         const area = 0.5 * firstInputValue * secondInputValue;
+        setArea(cartBodyElement, area);
+
+    }
+    if(cartTitle.innerText === "Rectangle" || cartTitle.innerText === "Parallelogram" || cartTitle.innerText === "Rhombus"){
+        const area = 0.5 * firstInputValue * secondInputValue;
+        setArea(cartBodyElement, area);
+
+    }
+    if(cartTitle.innerText === "Ellipse"){
+        const area = Math.PI * firstInputValue * secondInputValue;
         setArea(cartBodyElement, area);
 
     }
