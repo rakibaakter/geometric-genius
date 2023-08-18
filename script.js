@@ -1,1 +1,3 @@
-console.log('hello');
+function calculateArea(target){
+    console.log(target);
+}
