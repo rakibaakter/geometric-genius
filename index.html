@@ -22,14 +22,14 @@
             </div>
             <div class="flex-none gap-2">
                 <div class="">
-                    <button class="btn btn-info">Blog</button>
+                    <button class="btn btn-info" onclick="document.getElementById('listOfCalculation').style.display ='block'">List of Calculation</button>
                 </div>
             </div>
           </div>
     </header>
     <main class="mx-5 my-10">
-        <div class="flex px-5">
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 flex-1">
+        <div class="flex relative px-5">
+            <div class=" grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 flex-1">
                 <!-- triange -->
                 <div class="card bg-base-100 shadow-xl">
                     <figure class="px-10 pt-10">
@@ -155,7 +155,7 @@
     
             </div>
             <!-- calculation list-->
-            <div class="flex justify-center ">
+            <div class="flex justify-center hidden absolute -top-16 right-0 bg-slate-100 z-10 rounded-lg" id="listOfCalculation">
                 <div class="mt-10 text-center" id="calculationListId">
                     <h2 class="text-2xl font-semibold underline mb-10">Area Calculator</h2>
                     

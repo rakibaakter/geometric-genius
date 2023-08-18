@@ -27,12 +27,12 @@ function calculationList( title, area){
     // h3.style.fontWeight = "bold";
     // calculationList.appendChild(h3);
     // const h3Element = `${count + 1} ${title} ${area} cm<sup>2</sup>`;
-    div.innerHTML = `<h3 class="text-xl font-bold my-1 flex justify-between items-center">
-        <span class="w-1/12">${count}</span> 
-        <span class="w-1/2 text-center mx-2">${title.innerText}</span>
-        <span class=w-1/3 text-center mx-2">${area.toFixed(2)}</span>
-        <span class="w-1/4 text-center mx-2">cm<sup>2</sup></span> 
-        <button class="btn bnt-info bg-orange-300 btn-small">convert</button>
+    div.innerHTML = `<h3 class="font-bold my-1 grid grid-cols-5 items-center w-3/4">
+        <span class="">${count}</span> 
+        <span class= "mr-2">${title.innerText}</span>
+        <span class ="">${area.toFixed(2)}</span>
+        <span class="">cm<sup>2</sup></span> 
+        <button class="btn bg-orange-300 btn-small">convert</button>
         </h3>`;
     calculationList.appendChild(div);
     
