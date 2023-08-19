@@ -1,10 +1,8 @@
 // get input value
 function getInputValue(item, index){
-    // console.log(inputElements.childNodes)
     const inputFeild = item.childNodes[index];
     const inputStringValue = inputFeild.value;
     const inputValue = parseFloat(inputStringValue);
-    // console.log(typeof inputValue);
     return inputValue;
 }
 // set Area 
@@ -23,15 +21,10 @@ function calculationList( title, area){
     const count = calculationList.childElementCount;
     const div = document.createElement('div');
     const h3Element = count + " " + title.innerText + " " + area ;
-    // h3.innerText = h3Element;
-    // h3.style.fontWeight = "bold";
-    // calculationList.appendChild(h3);
-    // const h3Element = `${count + 1} ${title} ${area} cm<sup>2</sup>`;
     div.innerHTML = `<h3 class="font-medium my-1 flex items-center justify-between">
         <span class="mr-1">${count}</span> 
-        <span class= "w-24">${title.innerText}</span>
-        <span class ="w-24">${area.toFixed(2)}</span>
-        <span class="mr-1">cm<sup>2</sup></span> 
+        <span class= "">${title.innerText}</span>
+        <span class ="">${area.toFixed(2)} cm<sup>2</sup></span>
         <button class="bg-orange-200 px-1 rounded-sm">convert m<sup>2</sup></button>
         </h3>`;
     calculationList.appendChild(div);
@@ -47,6 +40,11 @@ function calculateArea(target){
     // find input field
     const firstInputValue = getInputValue(inputElements , 1);
     const secondInputValue = getInputValue(inputElements , 5);
+    // validation
+    if(isNaN(firstInputValue) || isNaN(secondInputValue) ){
+        alert("input must be a valid number");
+        return;
+    }
     let area = 1;
     // find cart title  
     const cartTitle  = cartBodyElement.childNodes[1];

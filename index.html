@@ -12,8 +12,8 @@
 </head>
 
 <body>
-  <header class="bg-sky-100 px-2 py-3 md:px-5 lg:px-8">
-    <div class="navbar">
+  <header class="bg-sky-100 px-2 py-3 md:px-5 lg:px-8 relative">
+    <div class="navbar ">
       <div class="flex-1">
         <a class="btn btn-ghost normal-case text-xl">Interactive
           <br>
@@ -24,17 +24,17 @@
         <div class="relative">
           <button class="btn btn-info"
             onclick="document.getElementById('listOfCalculation').style.display ='block'">List of Calculation</button>
-            <!-- calculation list-->
-          <div class="flex justify-center hidden absolute right-0 bg-slate-100 z-10 rounded-lg"
-          id="listOfCalculation">
-          <div class="mt-10 text-center" id="calculationListId">
-            <h2 class="text-2xl font-semibold underline mb-10">Area Calculator</h2>
+            
         </div>
-      </div>
-        </div>
-        
       </div>
     </div>
+    <!-- calculation list-->
+    <div class="flex justify-center w-full md:w-1/3 px-1 py-4 hidden absolute right-0 bg-slate-100 z-10 rounded-lg"
+    id="listOfCalculation">
+    <div class="mt-10 text-center" id="calculationListId">
+      <h2 class="text-2xl font-semibold underline mb-10">Area Calculator</h2>
+  </div>
+</div>
   </header>
   <main class="mx-5 my-10">
     <div class="px-5">
